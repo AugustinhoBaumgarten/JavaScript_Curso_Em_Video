@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sua nacionalidade</h1>
+    Seu país de origem <input type="text" id="pais">
+
+    <div id="res">
+
+    </div>
+    <input type="button" value="Verificar" onclick="verifica()">
+
+    <script>
+        function verifica(){
+            var pais = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var nome = pais.value
+            if(nome.toUpperCase() === 'BRASIL'){
+                res.innerHTML = `Vivendo em ${nome.toUpperCase()} você é Brasileiro`
+            }else{
+                res.innerHTML = `Vivendo em ${nome.toUpperCase()} você é Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
